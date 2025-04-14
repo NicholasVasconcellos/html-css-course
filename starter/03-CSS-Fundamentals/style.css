@@ -7,6 +7,10 @@ p {
   font-family: sans-serif;
 }
 
+.main-header{
+  background-color: white;
+}
+
 h1 {
   font-size: 23px;
   color: blue;
