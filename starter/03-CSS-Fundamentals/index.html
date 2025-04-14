@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>The Basic Language of the web: HTML</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -20,7 +21,7 @@
         alt="Warrior Profile Picture"
         width="200"
       />
-      <p>
+      <p id="author">
         Posted by <strong>Daemon Targaryan</strong> on Monday, June 21st 3047
       </p>
       <p>Bro lowkey reached enlightenment...</p>
@@ -86,31 +87,33 @@
       <p>Hopefully you learned something new here. See you next time!</p>
     </article>
     <aside>
-      <h3>Realated posts</h3>
-      <ul>
+      <h4>Realated posts</h4>
+      <ul class="related-posts-list">
         <li>
-          <img src="img/related-1.jpg" alt="Man on Computer" width="100" />
+          <img src="img/man on pc.jpg" alt="Man on Computer" width="100" />
           <a href="https://google.com" target="_blank">
             <strong>How to Learn Web Development</strong>
           </a>
-          <p>By Jason</p>
+          <p class="related-author">By Jason</p>
         </li>
         <li>
-          <img src="img/related-2.jpg" alt="Thunder"  width="100"/>
+          <img src="img/thunder.jpg" alt="Thunder" width="100" />
           <a href="https://google.com" target="_blank"
             ><strong>The Unknown Powers of CSS</strong></a
           >
-          <p>By Aemon Targaryan</p>
+          <p class="related-author">By Aemon Targaryan</p>
         </li>
         <li>
-          <img src="img/related-3.jpg" alt="Code on Screen" width="100" />
+          <img src="img/the code.jpg" alt="Code on Screen" width="100" />
           <a href="https://google.com" target="_blank"
             ><strong>Why Javascript is Awesome</strong></a
           >
-          <p>By the Goat Allmighty (Nick) &trade;</p>
+          <p class="related-author">By the Goat Allmighty (Nick) &trade;</p>
         </li>
       </ul>
     </aside>
-    <footer>This is the footer &copy; 3047 by the West Alliance</footer>
+    <footer>
+      <p id="copyright">This is the footer &copy; 3047 by the West Alliance</p>
+    </footer>
   </body>
 </html>
