@@ -17,10 +17,6 @@ article {
   position: relative;
 }
 
-.content {
-  width: 100%;
-}
-
 ul li {
   list-style-type: square;
 }
@@ -32,9 +28,32 @@ h2 {
   padding: 15px;
 }
 
+.content {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+/* .price-container {
+  display: flex;
+} */
+
+.price-shipping-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
 .price {
-  font-size: x-large;
   display: inline-block;
+  font-size: 24px;
+}
+
+.free-shipping {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #777;
 }
 
 a:link,
@@ -49,6 +68,11 @@ a:active {
 }
 
 /* PRODUCT DETAILS */
+.prouduct-details-container{
+  flex: 1;
+
+}
+
 button {
   font-size: 20px;
   border: none;
@@ -90,29 +114,11 @@ button:hover {
   display: inline-block;
   height: 22px;
   width: 22px;
-  margin-right: 10px;
-}
-
-.free-shipping {
-  display: inline-block;
-  margin: auto 40px;
 }
 
 .colors {
   margin-top: 30px;
-}
+  display: flex;
+  gap: 10px;
 
-.shoe-img {
-  float: left;
-}
-
-.price-container {
-  float: left;
-  width: 300px;
-  margin-left: 100px;
-}
-
-.product-details-container {
-  float: right;
-  width: 300px;
 }
