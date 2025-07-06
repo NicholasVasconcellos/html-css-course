@@ -1,0 +1,124 @@
+h1,
+h2,
+h3,
+button {
+  text-transform: uppercase;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+article {
+  border: 4px solid black;
+  margin: 15px auto;
+  width: 825px;
+  position: relative;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+h2 {
+  text-align: center;
+  font-size: 22px;
+  background-color: #f7f7f7;
+  padding: 15px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+/* .price-container {
+  display: flex;
+} */
+
+.price-shipping-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.price {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.free-shipping {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #777;
+}
+
+a:link,
+a:visited {
+  color: black;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* PRODUCT DETAILS */
+.prouduct-details-container{
+  flex: 1;
+
+}
+
+button {
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+button:hover {
+  color: black;
+  /* To conserve the size use either */
+  border-top: 4px solid black;
+  box-sizing: border-box;
+
+  background-color: #f7f7f7;
+
+  /* outline: 4px solid black; */
+  cursor: pointer;
+
+  /* filter: invert(); */
+}
+
+.sale-sticker {
+  text-transform: uppercase;
+  background-color: red;
+  color: white;
+  padding: 7px 15px;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+
+.box {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+}
+
+.colors {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+
+}
