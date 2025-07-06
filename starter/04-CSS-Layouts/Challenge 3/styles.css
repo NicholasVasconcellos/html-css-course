@@ -1,7 +1,9 @@
+*{
+  margin: 0;
+}
 h1,
 h2,
-h3,
-button {
+h3 {
   text-transform: uppercase;
 }
 
@@ -28,21 +30,10 @@ h2 {
   padding: 15px;
 }
 
-.content {
-  width: 100%;
-  display: flex;
-  gap: 40px;
-}
-
-/* .price-container {
-  display: flex;
-} */
-
 .price-shipping-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .price {
   display: inline-block;
@@ -68,18 +59,18 @@ a:active {
 }
 
 /* PRODUCT DETAILS */
-.prouduct-details-container{
+.product-details-container {
   flex: 1;
-
 }
-
-button {
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  width: 100%;
+/* Get h3 elements who are direct children of class */
+.product-details-container h3 {
+  text-align: center;
+}
+.product-details-container ul {
+  text-align: left; /* Aligns inline content */
+  align-self: stretch; /* Makes sure the <ul> can expand full width in flexbox */
+  padding-left: 1rem; /* Optional: Adds spacing for bullet indent */
+  margin: 0 auto; /* Optional: Center block if it's narrower */
 }
 
 button:hover {
@@ -120,5 +111,27 @@ button:hover {
   margin-top: 30px;
   display: flex;
   gap: 10px;
+}
 
+/* Grid layour */
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+button {
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+  grid-column: 1/-1;
 }
