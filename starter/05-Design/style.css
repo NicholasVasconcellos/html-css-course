@@ -22,7 +22,8 @@ Gray Color: #343a40
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "inter", sans-serif;
+  border-bottom: 20px solid #087f5b;
 }
 
 .container {
@@ -70,6 +71,35 @@ img {
   width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  background-color: #087f5b;
+  color: white;
+  text-decoration: none;
+  /* Common for buttons to be uppercase */
+  text-transform: uppercase;
+
+  /*  Medium Bold */
+  font-weight: 500;
+}
+
+.btn:hover,
+btn:active {
+  /* Set to lighter color 8 */
+  background-color: #099268;
+}
+
+.btn--big {
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.btn--small {
+  /* soacing system 12 / 16 / 24 / 32  */
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
 /* FEATURES */
 .features-icon {
 }
@@ -83,6 +113,9 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: #087f5b;
+  padding: 16px;
+  color: white;
 }
 
 .testimonial-box {
@@ -134,4 +167,6 @@ h3 {
 
 footer {
   margin-bottom: 48px;
+  font-size: 14px;
+  color: #343a40;
 }
