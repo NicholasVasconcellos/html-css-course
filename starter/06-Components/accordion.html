@@ -10,7 +10,143 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <style></style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #e9ecef;
+        line-height: 1;
+        background-color: #1a1a2e;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .section {
+        color: #ced4da;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        padding: 24px;
+        background-color: #16213e;
+        border-radius: 8px;
+        box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.4);
+      }
+      .number,
+      .header-text {
+        color: #20c997;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        fill: #20c997;
+      }
+
+      .hidden-section {
+        grid-column: 2;
+        display: none;
+      }
+      .hidden-section p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-section ul {
+        color: #adb5bd;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-left: 20px;
+      }
+
+      .open {
+        border-top: 4px solid #20c997;
+      }
+
+      .open .hidden-section {
+        /* color: #20c997; */
+        display: block;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="accordion">
+      <div class="section">
+        <p class="number">01</p>
+        <p class="header-text">What is special about this chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          class="icon icon-down"
+        >
+          <path
+            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+          ></path>
+        </svg>
+        <div class="hidden-section">
+          <p>Quas, iste illum nulla odio suscipit</p>
+          <ul>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section open">
+        <p class="number">02</p>
+        <p class="header-text">Where can I buy my chair tho?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          class="icon icon-down"
+        >
+          <path
+            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+          ></path>
+        </svg>
+        <div class="hidden-section">
+          <p>Quas, iste illum nulla odio suscipit</p>
+          <ul>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <p class="number">03</p>
+        <p class="header-text">Do you sell to brokies?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          class="icon icon-down"
+        >
+          <path
+            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+          ></path>
+        </svg>
+        <div class="hidden-section">
+          <p>Quas, iste illum nulla odio suscipit</p>
+          <ul>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+            <li>sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
