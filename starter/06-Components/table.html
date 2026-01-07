@@ -19,12 +19,51 @@
 
       body {
         font-family: "Inter", sans-serif;
-        color: #e9ecef;
+        color: #000;
         line-height: 1;
-        background-color: #1a1a2e;
+        background-color: #fff;
+        display: flex;
+        justify-content: center; /* Center along primary axis */
       }
 
-      table{
+      table {
+        width: 80%; /* Based on vibes */
+        max-width: 800px;
+        min-width: 400px;
+        margin-left: 50px;
+        margin-right: 50px;
+        overflow-x: visible;
+        background-color: #38d9a9; /* Get from open colors */
+        /* Becomes centered from the flex parent */
+        margin-top: 100px; /* Based on vibes */
+        /* border: 1px solid #868e96; */
+        border-collapse: collapse; /* Merge the borders so they don't look weird */
+      }
+
+      td,
+      th {
+        /* border: 1px solid #868e96; */ /* comment this out, border was just to demonstrate */
+        text-align: left;
+        padding: 16px 24px; /* 16 vertical, 24 horizontal, based off vibes */
+      }
+
+      /* Select th elements inside of thead */
+      /* Descendant element Selector, only th inside of thead */
+      thead th {
+        background-color: #0ca678;
+        color: #fff;
+        width: 25%; /* Assuming 4 columns */
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      table {
         width: 800px;
       }
     </style>
