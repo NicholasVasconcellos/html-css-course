@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -40,9 +40,15 @@
         stroke: #099268;
         border: 1px solid #099268;
         border-radius: 50%;
-        padding: 2px;
+        padding: 4px;
       }
-      .page-number{
+
+      .icon:hover {
+        stroke: #fff;
+        background-color: #099268;
+      }
+      .page-number,
+      .page-dots {
         font-size: 0.8rem;
         font-weight: 400;
         display: flex;
@@ -53,11 +59,14 @@
         border-radius: 50%;
       }
 
-      .active-page{
+      .page-number:hover {
         color: #fff;
         background-color: #099268;
-        
+      }
 
+      .active-page {
+        color: #fff;
+        background-color: #099268;
       }
     </style>
   </head>
@@ -83,7 +92,7 @@
       <div class="page-number">4</div>
       <div class="page-number">5</div>
       <div class="page-number">6</div>
-      <div class="page-number">...</div>
+      <div class="page-dots">...</div>
       <div class="page-number">99</div>
 
       <svg
