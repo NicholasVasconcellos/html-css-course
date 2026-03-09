@@ -1,0 +1,33 @@
+background-image: url(path/myImage.png)
+background-size:cover
+
+
+background-image: linear-gradient(), url(hero.jpg) // Stack of images
+
+Semantic HTML:
+main: Everything unique to the pge (not heder/footer/nav)
+
+nv: nvigation 
+
+menu: list of interctive buttons (rarely used can ignore)
+
+section
+/ themtic group of content (chpter of the pge)
+
+Aside
+Sidebar, tangentil info
+
+<body>
+  <nav>        ← site navigation
+  <main>       ← the actual page content
+    <section>  ← a chunk/topic within main
+    <section>  ← another chunk/topic
+    <aside>    ← sidebar or tangential info
+  </main>
+</body>
+
+----------------
+
+
+Overflow: Scroll
+flex-shrink : 0 // On Ech Child
