@@ -1,0 +1,61 @@
+## Reponsive Web Design
+
+* max-width
+
+/* Width = Parent container (100%), until cap of Max-width */
+  max-width: 1000px;
+
+### Rem
+
+rem: Root Element Font Size
+
+Defualt: 1rem = 16px (def browser font size)
+
+1rem = font size of <html> element
+
+set font size at html level 
+* Recoomend settign to 10
+* Don't hard code, but instead scale the Defualt
+* Setting it to 10 is the same as scaling default to 62.5%
+* Purely  scaling unit (abstrct)
+
+
+html{
+  font-size: 62.5%;
+}
+
+* Scles should user Rem insted of px, so thei scale if needed
+
+
+Semantic html
+* Section: prt of a lrger content
+* article: Self Contined meaning
+
+
+Best practices
+* Likes to use only class selector for consistency
+* Buttons should only be used for actions (unrelated to navigation)
+* Use Styled link for button 
+
+
+CTA:
+* should contin the value
+* subscribe ❌, start eting well ✅
+
+
+Add border without chnging box dimentions
+
+/* Shadow Trick */
+  box-shadow: inset 0 0 0 3px #fff;
+
+
+
+Animations
+* Got to OG State, nd put  a trnsition
+
+
+Transitions
+* Put it on the OG State
+Trnsition(properties affectred, duration, dely, type)
+
+
