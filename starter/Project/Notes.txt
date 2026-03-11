@@ -59,3 +59,5 @@ Transitions
 Trnsition(properties affectred, duration, dely, type)
 
 
+Check contrst Ratio: Coolers
+

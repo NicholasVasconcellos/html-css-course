@@ -16,7 +16,7 @@ Default: 1
 
 Primary: #e67e22
 Tints: #fdf2e9
-Shades:#cf711f
+Shades:#cf711f, #a15818;
 Accents:
 Greys: #555
 
@@ -129,6 +129,7 @@ body {
   background-color: #e67e22;
   color: white;
   font-size: 2rem;
+  font-weight: 600;
   padding: 1.6rem 3.2rem;
   /* Gapx = 2 * gapY */
   border-radius: 9px;
@@ -168,3 +169,38 @@ body {
 }
 /*  Add border without changing dimentions */
 /* Shadow Trick */
+
+.gap-top-lg {
+  margin-top: 8rem;
+}
+
+.testimonials {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.testimonial-images {
+  display: flex;
+}
+
+.testimonial-images img {
+  border-radius: 50%;
+  border: 3px solid #fdf2e9;
+  height: 4.8rem;
+  margin-right: -16px;
+}
+
+.testimonial-images img:last-child {
+  margin: 0;
+}
+
+.testimonials p {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.testimonials p span {
+  font-weight: 700;
+  color: #e67e22;
+}
