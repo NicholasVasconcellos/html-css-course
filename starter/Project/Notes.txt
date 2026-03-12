@@ -15,7 +15,7 @@ Defualt: 1rem = 16px (def browser font size)
 
 set font size at html level 
 * Recoomend settign to 10
-* Don't hard code, but instead scale the Defualt
+* Don't hard code, but instead scale the Default
 * Setting it to 10 is the same as scaling default to 62.5%
 * Purely  scaling unit (abstrct)
 
@@ -60,4 +60,6 @@ Trnsition(properties affectred, duration, dely, type)
 
 
 Check contrst Ratio: Coolers
+
+HTML Header in the beggining of  section
 

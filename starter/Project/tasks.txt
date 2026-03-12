@@ -1,0 +1,5 @@
+* add Header with Navigation nd Logo
+- uses header Semantic html component ()
+- nav for the navigation links (main nav)
+- Set below the heder until end to be the semntic hmtl main Section
+- 
