@@ -1,0 +1,121 @@
+/* 
+Collapse Sections: cmd, K -> cmd, 8
+Expand Sections: cmd,k, cmd, 9
+*/
+
+/* #region GENERAL */
+html {
+  /* Scale dow by 10/16, so default rem is 10px */
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* Width, Height * Content + Pdding + Border */
+  /* Width, Height is the total  */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+/* #endregion GENERAL */
+
+/* #region REUSABLE COMPONENTS */
+
+/* BUTTON */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  /* Gapx * 2 * gapY */
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  /* background-color: #cf711f; */
+  background-color: #b8651b;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: white;
+  color: #555;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+  /* Shadow Trick */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.gap-right-sm {
+  /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+  margin-right: 1.6rem !important;
+  /* Ensure it get's applied */
+}
+/*  Add border without changing dimentions */
+/* Shadow Trick */
+
+.gap-top-lg {
+  margin-top: 8rem;
+}
+
+/* CONTAINER*/
+
+.container-centered {
+  /* conventions for max Width: 120rem or  1140px (Except for hero that can be a bit larger */
+  max-width: 120rem;
+  /* Centered horizontally*/
+  margin: 0 auto;
+}
+
+/* GRID  */
+
+.grid-2cols {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3cols {
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Center Grid on X (main axis) */
+.grid-center-x {
+  justify-items: center; /* Main, X (Horizontal Alignment)*/
+}
+
+/* Center Grid on Y (Secondary Axis) */
+.grid-center-y {
+  align-items: center; /* Secondary, Y (Vertical Alignment)*/
+}
+
+.grid-center {
+  justify-items: center; /* Main, X (Horizontal Alignment)*/
+  align-items: center; /* Secondary, Y (Vertical Alignment)*/
+}
+
+/* #endregion REUSABLE COMPONENTS */
