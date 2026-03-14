@@ -188,9 +188,27 @@ Expand Sections: cmd,k, cmd, 9
   margin-bottom: 9.6rem;
 }
 
+.step-container {
+  position: relative;
+}
+
 .step-image-box {
   width: 35%;
   /* margin: auto; */
+}
+
+/* Adding Html Element after */
+
+.step-image-box::before {
+  content: ""; /* Requires content */
+  display: block;
+  width: 100%; /* Around double that of the image */
+  /* height: 60%; */
+
+  /* Can't do height so use the padding instead */
+  padding-bottom: 100%;
+  background-color: aqua;
+  position: absolute;
 }
 
 .step-text-box {
@@ -224,6 +242,10 @@ Expand Sections: cmd,k, cmd, 9
 /* p */
 .step-text-body {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 /* #endregion HOW IT WORKS SECTION */
+
+/* 
+
+*/
