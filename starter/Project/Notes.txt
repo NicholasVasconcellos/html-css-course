@@ -63,3 +63,38 @@ Check contrst Ratio: Coolers
 
 HTML Header in the beggining of  section
 
+
+
+
+## Explanation of Why Remove Center on X for the Grid:
+
+  when we do Justify Items Center
+  * Each element will fit to it's content, then add necessary margin on each side
+  * Otherwise the default is stretch: making the content width = parent width
+  * so if nothing specified the content size = cellWidth, cellHeight
+
+
+  so by removing the justify items center, we let the image component have the default size of col size
+  then we scale it t0 35% of the width. 
+
+  if we didn't do this, then the calculation for the width wold be different, and the scling would have to be different
+  here is how that would play out:
+
+  Grid > img box > img
+
+  img.width = imgbox.width
+
+  imgbox.width = img.width (since it's not set , and grid justify center makes it fit to child)
+
+  Circular dependency
+
+  browser fall back interrups and sets
+
+  imgBox.width = img.DefaultWidth (from the png file)
+
+  then img.width  = 0.35 * imgBox.width (bout a third of the parent)
+
+  which is different than: img.width = 0.35 * FullColumnWidth, which is what happens when we left the justify = stretch by default
+
+
+
