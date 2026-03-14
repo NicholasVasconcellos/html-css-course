@@ -202,26 +202,49 @@ Expand Sections: cmd,k, cmd, 9
 
   /* wid */
 }
-/* 
 /* Add Pseudo element (html) before */
 .step-image-box::before {
+  /* pseudo element rendering */
+  content: "";
+  width: 60%; /* witdh = parent.width  *50% */
 
-  /* Goal is to make element be aboslutely position at the center of the image
-    and have width, height 60% of the img
-    make it a circle
-  */
-  content: ""; /* Requires content */
-  display: block;
-  width: 60%; /* Around double that of the image */
-  /* height: 60%; */
-  padding-bottom: 60%;
+  /*  Set height = width */
+  padding-bottom: 60%; /* padding-bottom = parent.width * 50% */
 
-  /* Can't do height so use the padding instead */
-  /* padding-bottom: 100%; */
-  background-color: aqua;
+  background-color: #fdf2e9;
+
+  /* Center with aboslute positioning */
+  /* Explanation on Notes */
+  position: absolute;
+  top: 50%; /* top edge . y = parent.midPointY */
+  left: 50%; /* left edge.x = parent.midPointX */
+  transform: translate(-50%, -50%); /* x -= 50% * width, y -= 50% * height */
+
+  /* make round */
+  border-radius: 50%;
+
+  /* Push it to background */
+  z-index: -2;
+}
+
+.step-image-box::after {
+  content: "";
+  width: 50%; /* witdh = parent.width  *50% */
+  padding-bottom: 50%;
+
+  background-color: #fae5d3;
+
+  /* Center with absolute positioning */
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* make round */
+  border-radius: 50%;
+
+  /* Push it to background */
+  z-index: -1;
 }
 
 .step-text-box {

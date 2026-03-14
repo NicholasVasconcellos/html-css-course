@@ -97,4 +97,74 @@ HTML Header in the beggining of  section
   which is different than: img.width = 0.35 * FullColumnWidth, which is what happens when we left the justify = stretch by default
 
 
+## Why we use padding: x% 
+
+whe we use percent base padding it gets the width of parent
+
+
+  /* padding = x% = parent.width * x% */
+  /* padding percentage values grab the width of the parent */
+  /* Width is uses since width is always defined , whereas heigh is usually auto */
+
+  so in this case we use it to make the bottom padding equal to the width of the parent
+
+  padding-bottom: 100%
+
+  Thus we will have a square with side width:
+
+  width: 100%
+  padding-bottom: 100%
+
+  the reason we manually define with is 1. because this is pesudo element with no contnet so it doens't get th edefault width:100% same as a div or other elements,
+
+  2.it was inline, but granted we did fix that part with display: block
+
+  3.position absolute removes that default behaviour
+
+
+
+  ## Centerign with absolute positioning
+
+  topL 50%
+top edge will be at 50% of parent's height
+Center the top edge on Y
+Left: 50%
+left edge will be at 50% of parent width
+Centering the left edge on X
+
+if we want the element's center to be at the center, we can translate it by half it's own Width and Height respectively
+
+using
+
+transform:translate(), which percentage values here are relative to the element itself
+
+so we have
+
+top: 50% /* top edge . y = parent.midPointY */
+left: 50% /* left edge.x = parent.midPointX */
+
+
+transform:translate(-50%, -50%); /* x -= 50% * width, y -= 50% * height */
+
+
+
+## After and Before pesudo elements
+
+create style only implicit html element
+
+Creates it as a child of the element selected
+Before, creates it as first child
+After, creates it as last child
+
+Requires the following to appear
+
+content="";
+position:absolute;
+
+
+width// Gets from parent
+
+padding: % get's from parent.width
+
+
 
