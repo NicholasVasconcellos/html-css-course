@@ -166,5 +166,28 @@ width// Gets from parent
 
 padding: % get's from parent.width
 
+## Image Filter
+
+Maniplulate the iamge display with filters
+
+get the black and white
 
 
+## Transition Flicker on Page Load
+
+Problem: using `transition: all` causes elements to animate/jump when the page loads (e.g., fonts loading cause reflow)
+
+Fix 1: Be specific about what you transition
+  transition: color 0.3s;
+  Only transition the properties you actually need, not `all`
+
+Fix 2: Preload class (when you need multiple transitions)
+  Add a class to body that disables transitions, remove it after load
+
+  CSS:
+  .preload * { transition: none !important; }
+
+  HTML:
+  <body class="preload" onload="document.body.classList.remove('preload')">
+
+  This blocks all transitions until the page finishes loading

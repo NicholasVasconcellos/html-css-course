@@ -129,7 +129,7 @@ Expand Sections: cmd,k, cmd, 9
   font-size: 1.8rem;
 
   /* nimtion for hover & active states */
-  transition: all 1s;
+  transition: color 0.3s;
 }
 
 .nav-main-li:hover,
@@ -282,6 +282,47 @@ Expand Sections: cmd,k, cmd, 9
 }
 /* #endregion HOW IT WORKS SECTION */
 
-/* 
+/* #region FEATURED IN SECTION */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
 
-*/
+.section-featured-heading {
+  /* H2 element */
+  /* h2 because each section technically should have a header for semantics */
+  /* Similar to subheading style */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  text-align: center;
+  padding-bottom: 2.4rem;
+  color: #888;
+}
+
+.logo-list {
+  display: flex;
+
+  /*Fits container perfectly no border gap*/
+  /* justify-content: space-between;  */
+
+  /* Adds a Border gap of 1/2 gap  */
+  /* in this case we do want it to be a bit more narrow than other sections */
+  justify-content: space-around;
+}
+.logo-list img {
+  height: 3.2rem;
+
+  /* 1005 full b&w, 0% unchanged */
+  /* filter: grayscale(100%); */
+  /*   But this doens't make everythin the same grey */
+
+  /* filter: saturate(500%); */
+
+  /* Opacity 0: trasnparent 100% no change */
+  /* hue rotate, rotat eby an angle on the color wheel */
+  /* Gay scale: */
+  /* Bridthness 0% black (000), 100% normal, > 100, scales brithness up  */
+  filter: brightness(0%) opacity(50%);
+}
+
+/* #endregion FEATURED IN SECTION */
