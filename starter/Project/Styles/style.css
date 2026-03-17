@@ -3,10 +3,6 @@ Collapse Sections: cmd, K -> cmd, 8
 Expand Sections: cmd,k, cmd, 9
 */
 
-/* #region HERO SECTION */
-/* **** HERO SECTION ***** */
-/* *********************** */
-
 .section-hero {
   /* Center on parent (page) */
   background-color: #fdf2e9;
@@ -44,41 +40,48 @@ Expand Sections: cmd,k, cmd, 9
 }
 /* #endregion HERO SECTION */
 
-/* #region TESTIMONIALS */
-/* **** TESTIMONIALS  ***** */
+/* #region user-highlights */
+/* **** user-highlights  ***** */
 /* *********************** */
 
-.testimonials {
+.user-highlights {
   display: flex;
   gap: 3.2rem;
   align-items: center;
 }
 
-.testimonial-images {
+.user-highlights-images {
   display: flex;
 }
 
-.testimonial-images img {
+.user-highlights-images img {
   border-radius: 50%;
   border: 3px solid #fdf2e9;
   height: 4.8rem;
   margin-right: -16px;
+  transition: transform 0.5s ease-in-out, border 0.3s ease-out;
+  position: relative;
 }
 
-.testimonial-images img:last-child {
+.user-highlights-images img:hover {
+  transform: translateY(-10px);
+  border: 3px solid #e67e22;
+}
+
+.user-highlights-images img:last-child {
   margin: 0;
 }
 
-.testimonials p {
+.user-highlights p {
   font-weight: 600;
   font-size: 1.8rem;
 }
 
-.testimonials p span {
+.user-highlights p span {
   font-weight: 700;
   color: #e67e22;
 }
-/* #endregion TESTIMONIALS */
+/* #endregion user-highlights */
 
 /* #region HEADER */
 /* **** HEADER ***** */
@@ -155,37 +158,6 @@ Expand Sections: cmd,k, cmd, 9
   /* background-color: green; */
   padding: 9.6rem 0;
   /* font-size: 5.2rem; */
-}
-
-.subheading {
-  display: inline-block;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-
-  /* Highlight Color - Darker by 2 shades */
-  /*  highlight-dark-2 */
-  color: #cf711f;
-
-  /* when Text is really small and upper case > increase letter spacing a bit */
-  letter-spacing: 0.75px;
-}
-
-.heading-2 {
-  /* import from heading 1 */
-  letter-spacing: -0.5px;
-  font-weight: 700;
-  margin-bottom: 3.2rem;
-
-  font-size: 4.4rem;
-  line-height: 1.02;
-
-  /* Get shade from highlight color or shade of gray from opencolor */
-  color: #333;
-
-  /* try to match the same gap from the content in the top element */
-  /* which is a lot */
-  margin-bottom: 9.6rem;
 }
 
 .step-image-box {
@@ -326,3 +298,196 @@ Expand Sections: cmd,k, cmd, 9
 }
 
 /* #endregion FEATURED IN SECTION */
+
+/* #region MEALS SECTION */
+/* *********************** */
+/* MEALS SECTION */
+/* *********************** */
+
+.section-meals {
+  /* consistent with other sections */
+  padding: 9.6rem 0;
+}
+
+.meals-subheading {
+  text-align: center; /*center the text*/
+}
+
+.meals-heading-2 {
+  text-align: center;
+}
+
+/* card container:
+box shadow: X= 0, Y  = 2.4px , blur .48 rem, color: rba (000, 0.075)
+
+// Likes odd number for radius
+border radius: 11 px;
+
+overflow: hidden;
+// Hides any objects that clip out of the container
+
+// Add a padding but not to the image part
+
+// only for the tags and etc.
+
+
+// Everything but the image
+cards-content:
+	 // CW starting from top
+	padding: 3.2rem 4.8rem 4.8rem 4.8rem
+
+tag:
+	front weight: 600
+meal-tags:
+margin bottom 1.2 rem */
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  /* gap: 2rem; */
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.meal-card:hover {
+  transform: translate(0, -20px);
+}
+
+.meal-card img {
+  width: 100%;
+}
+
+.meal-card .meal-card-content {
+  /* padding: 3.2rem 4.8rem 4.8rem 4.8rem; */
+  padding: 3.8rem 4.8rem 4.8rem 4.8rem;
+}
+
+/* title */
+/* p */
+.meal-card .meal-card-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+/* Tags */
+
+.meal-card .tags {
+  margin-bottom: 1.8rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.meal-card .tag {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: #51cf66;
+  /* Strat to use Wdith double the height */
+  padding: 0.4rem 0.8rem;
+  color: #333;
+  font-weight: 700;
+  border-radius: 100px;
+}
+
+/* Attributes */
+
+/* ul */
+.meal-card .meal-card-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-card .meal-card-attributes li {
+  font-size: 1.8rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Ion Icon */
+.meal-icon {
+  /* Icons size determine by font size */
+  /* width/ height set container's size */
+  color: #e67e22;
+
+  /* if pure svg: use stroke for the line, and fill */
+}
+
+/* *** Diet List ***** */
+
+.diets-list-header {
+  font-size: 3rem;
+  line-height: 2.8rem;
+  color: #333;
+  margin-bottom: 3.2rem;
+}
+
+.diets-list {
+  font-size: 1.8rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  justify-items: baseline;
+
+  /* 2 / 4 / 8 / 12
+16 / 24 / 32 /48
+64 / 80 / 96 / 128
+ */
+}
+
+.diets-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.diets-list ion-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* All Recipes Link */
+
+.recipes-link {
+  margin-top: 6.4rem;
+  font-size: 1.8rem;
+  transition: all 0.3;
+  text-align: center;
+}
+
+.recipes-link a:link,
+.recipes-link a:visited {
+  color: #e67e22;
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.recipes-link a:hover,
+.recipes-link a:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* #endregion MEALS SECTION */
+
+/* #region TESTIMONIALS */
+/* Testimonials */
+
+.section-testimonials {
+}
+
+/* #endregion TESTIMONIALS */

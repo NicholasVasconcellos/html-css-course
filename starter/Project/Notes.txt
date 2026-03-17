@@ -191,3 +191,23 @@ Fix 2: Preload class (when you need multiple transitions)
   <body class="preload" onload="document.body.classList.remove('preload')">
 
   This blocks all transitions until the page finishes loading
+
+
+
+## In line / Block level elements and Centering
+  * inline element will have width fitting to content, doing text align center will chnage nothing visually, since there was no empty space
+  * to center it on the line you can add text-align center to the parent container
+
+  * make the display into block, will make it span the full line (width of parent), you can do text align center 
+
+
+  ## Ion Icons Usage
+
+  link the script:
+
+  <script src=:https ...>
+
+  pick from here:
+   https://ionic.io/ionicons
+
+  then use the <ion-icon element
