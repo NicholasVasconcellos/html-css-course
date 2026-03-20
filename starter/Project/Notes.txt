@@ -211,3 +211,25 @@ Fix 2: Preload class (when you need multiple transitions)
    https://ionic.io/ionicons
 
   then use the <ion-icon element
+
+
+
+  ## Pricing section
+
+new container centered as a 2col grid
+each item is a pricing plan (add 2)
+
+plan:
+* Name (title)
+* Price (Wrap the $ inside a span to format individually)
+* Feature List: (Resuse the list component from the meals section)
+
+Add the start Eating Well Call to action (re-use from hero)
+
+starter plan:
+
+
+
+Prices include all applicable taxes. users can cancel at any time.
+
+

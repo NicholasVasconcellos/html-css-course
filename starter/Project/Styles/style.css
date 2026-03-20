@@ -59,7 +59,9 @@ Expand Sections: cmd,k, cmd, 9
   border: 3px solid #fdf2e9;
   height: 4.8rem;
   margin-right: -16px;
-  transition: transform 0.5s ease-in-out, border 0.3s ease-out;
+  transition:
+    transform 0.5s ease-in-out,
+    border 0.3s ease-out;
   position: relative;
 }
 
@@ -488,6 +490,254 @@ margin bottom 1.2 rem */
 /* Testimonials */
 
 .section-testimonials {
+  background-color: #fdf2e9;
+  /* padding: 9.6rem 0; */
+  margin-bottom: 9.6rem;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials {
+  padding: 9.6rem;
+}
+
+.testimonial-figure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 5.2rem; */
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+/* Figure */
+.testimonial {
+}
+
+/* img */
+.testimonial-img {
+  /* make it round */
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+/* block quote */
+.testimonial-quote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3.2rem;
+}
+
+/* p */
+.testimonial-author {
+  /* dark: 333
+      lighter: 555
+      even-lighter: 777
+     */
+
+  font-size: 1.6rem;
+
+  color: #6f6f6f;
+}
+
+.testimonial-author::before {
+  content: "— ";
+}
+
+/* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+
+  /* Extend the same gap for the padding */
+  padding: 1.6rem;
+}
+
+.gallery-entry {
+  overflow: hidden;
+}
+
+.gallery-entry img {
+  display: block;
+  width: 100%;
+
+  transition: all 0.3s;
+}
+
+.gallery-entry img:hover {
+  scale: 110%;
 }
 
 /* #endregion TESTIMONIALS */
+
+/* #region PRICING */
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.section-pricing .pricing-grid {
+  width: 55%;
+  margin-bottom: 4.8rem;
+}
+
+.pricing-plan {
+  border: 3px solid #fdf2e9;
+  border-radius: 9px;
+
+  display: flex;
+  flex-direction: column;
+  /* Grid like behaviour (fixed heights) */
+  flex-basis: 0;
+  padding: 4.6rem;
+  gap: 4.8rem;
+  position: relative;
+}
+
+.pricing-plan:last-child {
+  background-color: #fdf2e9;
+  overflow: hidden;
+}
+
+.pricing-plan:last-child::before {
+  content: "Best Value";
+  /* text-align: center; */
+  text-transform: uppercase;
+  background-color: #ffd43b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 7%;
+  right: -22%;
+  padding: 0.8rem 10rem;
+  overflow: hidden;
+}
+
+.pricing-plan-header {
+  text-align: center;
+}
+
+.pricing-plan .name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.pricing-plan .price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+/* Dollar Sign */
+.pricing-plan .price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.pricing-plan .pricing-message {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.pricing-plan .pricing-list {
+  font-size: 1.8rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  justify-items: baseline;
+
+  /* Takes 100% of Extra space among children */
+  flex-grow: 1;
+}
+
+.pricing-plan .pricing-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.sign-up-cta {
+  text-align: center;
+}
+
+/* Details: Aside element */
+
+.plan-details {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* Features*/
+
+.feature-grid {
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* gap: 3.2rem; */
+}
+
+.feature-icon {
+  font-size: 3.2rem;
+  display: inline-block;
+  background-color: #fdf2e9;
+  color: #e67e22;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+  /* padding: 1.6rem; */
+  padding: 10%;
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  color: #333;
+}
+
+.feature-text {
+  color: #555;
+  line-height: 1.5;
+  font-size: 1.8rem;
+}
+/* #endregion PRICING */
+
+/* 
+-FONT SIZES (px):
+10 / 12 / 14 / 16
+18 / 20 / 24 / 30
+36 / 44 / 52 / 62
+74 / 86 / 98
+
+-FONT WEIGHTS:
+default: 400
+
+-LINE HEIGHTS:
+Default: 1
+Small: 1.05
+Paragraph Defult: 1.6
+
+-SPACING (px):
+2 / 4 / 8
+12 / 16 / 24
+32 / 48 / 64
+80 / 96 / 128
+
+*/

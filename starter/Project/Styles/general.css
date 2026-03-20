@@ -180,6 +180,12 @@ body {
   padding: 0 3.2rem;
 }
 
+/* SPACER */
+
+.space-bottom {
+  margin-bottom: 9.6rem;
+}
+
 /* GRID  */
 
 .grid-2cols {
@@ -193,6 +199,12 @@ body {
   display: grid;
   gap: 9.6rem;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4cols {
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* Center Grid on X (main axis) */
@@ -220,5 +232,6 @@ strong {
 ion-icon {
   color: #e67e22;
 }
+
 
 /* #endregion REUSABLE COMPONENTS */
